@@ -1,0 +1,10 @@
+## 💻 Desafio-02
+
+Nesse desafio, com uma aplicação React.JS,
+O objetivo foi refatorar a página para listagem de filmes de acordo com o gênero.
+
+O que foi feito? 
+
+No arquivo App.js contia toda a aplicação aonde foi refatorada em dois components
+Content.tsx e SideBar.tsx.
+
