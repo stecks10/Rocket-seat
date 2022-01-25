@@ -6,9 +6,7 @@ import { useContext } from 'react';
 import { TransactionsContext } from '../../TransactionsContext';
 
 export function Summary() {
-  const transactions = useContext(TransactionsContext);
-
-  console.log(transactions);
+  const { transactions } = useContext(TransactionsContext);
 
   return (
     <Container>
@@ -24,7 +22,7 @@ export function Summary() {
           <p> Saidas</p>
           <img src={outcomeImg} alt="Entradas" />
         </header>
-        <strong>-R$1000,00</strong>
+        <strong> -R$1000,00</strong>
       </div>
       <div className="highlight-background">
         <header>
