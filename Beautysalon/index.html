@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BeautySalon</title>
 
+  <!-- ICONES -->
+  <link rel="stylesheet" href="assets/fonts/style.css" />
   <!-- STYLES -->
+
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Fonts -->
@@ -18,12 +21,24 @@
 </head>
 
 <body>
-  <header id="header">
+  <header id="header" class="scroll">
     <nav class="container">
       <a class="logo" href="#">beauty<span>salon</span>.</a>
-      <div class="menu">...</div>
+      <!-- MENU-->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="#home">Inicio </a></li>
+          <li><a class="title" href="#about">Sobre</a></li>
+          <li><a class="title" href="#services">Serviços</a></li>
+          <li><a class="title" href="#testimonials">Depoimentos</a></li>
+          <li><a class="title" href="#contact">Contato</a></li>
+        </ul>
+      </div><!-- /MENU-->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
     </nav>
   </header>
+
 
   <main>
     <section class="section" id="home">
@@ -34,7 +49,7 @@
             alt="Mulher sorrindo penteando outra mulher" />
         </div>
         <div class="text">
-          <h1>Saúde natural para os seus cabelos</h1>
+          <h2 class="title">Saúde natural para os seus cabelos</h2>
           <p>
             Um salão exclusivo em São Paulo, especializado em tratamentos
             naturais.
@@ -44,12 +59,80 @@
       </div>
     </section>
 
-    <div class="divider-1"></div>
+    <div class="divider-1">
 
-    <section class="section">
-      <div class="container">outra section</div>
-    </section>
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+              alt="Cabelo sendo feito">
+          </div>
+          <div class="text">
+            <h2 class="title">Sobre nos</h2>
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis.Atirei o
+              pau no gatis, per gatis num morreus.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
+              pose.Interagi no mé, cursus quis, vehicula ac nisi.</p>
+            <br>
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis.Atirei o
+              pau no gatis, per gatis num morreus.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
+              pose.Interagi no mé, cursus quis, vehicula ac nisi.</p>
+            <br>
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis.Atirei o
+              pau no gatis, per gatis num morreus.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
+              pose.Interagi no mé, cursus quis, vehicula ac nisi.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2">
+
+      </div>
+
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p>
+              Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> ja
+              conquistou clientes de inumes paises com seus tratamentos
+              exclusivos e totalmente naturais
+            </p>
+          </header>
+
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-woman-hair"></i>
+              <h3 class="title">Terapia capilar</h3>
+              <p>Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris.Manduma
+                pindureta quium dia nois paga.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Mé
+                faiz elementum girarzis, nisi eros vermeio.</p>
+            </div>
+            <div class="card">
+              <i class="icon-trim"></i>
+              <h3 class="title">Cortes</h3>
+              <p>Mussum Ipsum, cacilds vidis litro abertis. Cevadis im ampola pa arma uma pindureta.Atirei o pau no
+                gatis, per gatis num morreus.Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.Nec orci
+                ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.</p>
+            </div>
+            <div class="card">
+              <i class="icon-cosmetic"></i>
+              <h3 class="title">Tratamentos</h3>
+              <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor. Aenean aliquam
+                molestie leo, vitae iaculis nisl.A ordem dos tratores não altera o pão duris.Praesent vel viverra nisi.
+                Mauris aliquet nunc non turpis scelerisque, eget.Quem num gosta di mé, boa gentis num é.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+
   </main>
+
+  <script src="main.js"> </script>
 </body>
 
 </html>
