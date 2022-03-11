@@ -448,20 +448,20 @@ nav.show .icon-close {
 }
 
 #contact .button i,
-#contact ul li i{
+#contact ul li i {
   font-size: 1.5rem;
-  margin-left: 0.625rem; 
+  margin-right: 0.625rem;
 }
 
-#contact ul.grid{
+contact ul.grid {
   gap: 2rem;
 }
 
 #contact ul li {
   display: flex;
   align-items: center;
- 
 }
+
 
 #contact ul li i {
   color: var(--base-color);
