@@ -7,4 +7,38 @@ function getUsers() {
   .catch(error => console.error(error))
 }
 
+
+function getUser(){
+  fetch(`${url}/2`)
+    .then(response => response.json())
+    .then(data => {
+     userName.textContent = data.name
+     userCity.textContent = data.city
+     userAvatar.src = data.avatar
+    })
+    .catch(error => console.error(error))
+}
+
+function addUser(newUser){
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(newUser),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+    .then(response => response.json())
+    .then(data => alertApi.textContent = data)
+    .catch(error => console.error(error))
+}
+
+const newUser = {
+  name: 'Olivia Zars',
+  avatar: 'https://picsum.photos/200/300',
+  city: 'Rio do SUl'
+}
+
+addUser(newUser)
+
 getUsers()
+getUser()
