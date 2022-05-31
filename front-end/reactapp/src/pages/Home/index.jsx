@@ -24,7 +24,13 @@ export function Home() {
   return (
     <>
       <div className="container">
-        <h1>Lista de Presença </h1>
+        <header>
+          <h1>Lista de Presença </h1>
+          <div>
+            <strong>Vitor</strong>
+            <img src="https://github.com/stecks10.png" alt="" />
+          </div>
+        </header>
         <input
           type="text"
           placeholder="Digite o nome..."
