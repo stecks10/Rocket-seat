@@ -1,5 +1,5 @@
 import { PencilLine } from 'phosphor-react';
-import styles from './Sidebar.module.css';
+import styles from './styles.module.css';
 
 export function Sidebar() {
   return (
