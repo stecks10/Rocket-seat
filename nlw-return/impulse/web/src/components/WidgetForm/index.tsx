@@ -57,7 +57,7 @@ export function WidgetForm() {
           className="underline underline-offset-2"
           href="https://rocketseat.com.br"
         >
-          Rocketseat
+          {''} Rocketseat
         </a>
       </footer>
     </div>
