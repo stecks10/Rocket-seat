@@ -2,6 +2,19 @@
 module.exports = {
   content: ['./src/**/*.tsx'],
   theme: {
+    screens: {
+      mobile: '280px',
+      // => @media (min-width: 480px) { ... }
+
+      tablet: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      laptop: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: '1280px',
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {
       fontFamily: {
         sans: 'Roboto, sans-serif',
@@ -28,8 +41,8 @@ module.exports = {
           500: '#323238',
           600: '#29292E',
           700: '#121214',
-          900: '#09090A'
-        }
+          900: '#09090A',
+        },
       },
     },
   },
