@@ -14,41 +14,47 @@ import {
   UserCardNameContainer,
 } from './styles';
 
-export function UserCard() {
+interface User {
+  name: string;
+  company: string;
+  bio: string;
+  followers: number;
+  url: string;
+  avatar: string;
+  login: string;
+}
+
+interface UserCardProps {
+  user: User;
+}
+
+export function UserCard({ user }: UserCardProps) {
   return (
     <Layout>
       <UserCardContainer>
-        <img src="https://github.com/stecks10.png" alt="vitor" />
+        <img src={user.avatar} alt={user.name} />
         <UserCardContent>
           <UserCardNameContainer>
-            <h2>Vitor</h2>
+            <h2>{user.name}</h2>
 
-            <a
-              href="http://github.com/stecks10"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={user.url} target="_blank" rel="noopener noreferrer">
               GITHUB
               <FaExternalLinkAlt color="#3294F8" size="12px" />
             </a>
           </UserCardNameContainer>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sit
-            impedit tempore architecto vero reprehenderit. Ducimus expedita a
-            optio non perferendis volup
-          </p>
+          <p>{user.bio}</p>
           <UserCardInfo>
             <span>
               <FaGithub size={18} color="#3A536B" />
-              Vitornunes
+              {user.login}
             </span>
             <span>
               <FaBuilding size={18} color="#3A536B" />
-              Rocketseat
+              {user.company}
             </span>
             <span>
               <FaUserFriends size={18} color="#3A536B" />
-              32 seguidores
+              {user.followers}
             </span>
           </UserCardInfo>
         </UserCardContent>
