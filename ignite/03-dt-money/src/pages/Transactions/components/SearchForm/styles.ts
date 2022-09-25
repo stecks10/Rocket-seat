@@ -25,8 +25,8 @@ export const SearchFormContainer = styled.form`
     border: 0;
     padding: 1rem;
     background: transparent;
-    border: 1px solid ${(props) => props.theme['gray-300']};
-    color: ${(props) => props.theme['gray-300']};
+    border: 1px solid ${(props) => props.theme['green-300']};
+    color: ${(props) => props.theme['green-300']};
     font-weight: bold;
     border-radius: 6px;
 
