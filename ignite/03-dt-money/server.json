@@ -9,11 +9,11 @@
       "createdAt": "2015-09-29T00:30:00.505Z"
     },
     {
-      "id": "1",
+      "id": "2",
       "description": "hamburguer",
       "type": "outcome",
       "category": "lanches",
-      "price": "500",
+      "price": "50",
       "createdAt": "2018-09-29T00:30:00.505Z"
     }
   ]
