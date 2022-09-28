@@ -47,6 +47,22 @@
       "type": "outcome",
       "createdAt": "2022-07-30T13:38:57.560Z",
       "id": 6
+    },
+    {
+      "description": "Banana",
+      "price": 20,
+      "category": "Feira",
+      "type": "income",
+      "createdAt": "2022-09-27T22:11:18.535Z",
+      "id": 7
+    },
+    {
+      "description": "Curso",
+      "price": 500,
+      "category": "Escola",
+      "type": "outcome",
+      "createdAt": "2022-09-28T00:33:50.684Z",
+      "id": 8
     }
   ]
 }
