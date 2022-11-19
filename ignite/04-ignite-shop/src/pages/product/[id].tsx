@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import Stripe from 'stripe';
 import { stripe } from '../../lib/stripe';
 import {
@@ -37,9 +36,11 @@ export default function Product({ product }: ProductProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  // Buscar os produtos mais vendidos/ mais acessados
+
   return {
     paths: [{ params: { id: 'prod_MYbPX1KFgjI9pl' } }],
-    fallback: false,
+    fallback: true,
   };
 };
 
