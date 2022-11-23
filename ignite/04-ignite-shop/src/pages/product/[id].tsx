@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Stripe from 'stripe';
 import { stripe } from '../../lib/stripe';
 import {
@@ -15,10 +15,15 @@ interface ProductProps {
     imageUrl: string;
     price: string;
     description: string;
+    defaultPriceId: string;
   };
 }
 
 export default function Product({ product }: ProductProps) {
+  function handleBuyButton() {
+    console.log(product.defaultPriceId);
+  }
+
   return (
     <ProductContainer>
       <ImageContainer>
@@ -28,28 +33,28 @@ export default function Product({ product }: ProductProps) {
       <ProductDetails>
         <h1>{product.name}</h1>
         <span>{product.price}</span>
+
         <p>{product.description}</p>
-        <button>Comprar Agora </button>
+
+        <button onClick={handleBuyButton}>Comprar agora</button>
       </ProductDetails>
     </ProductContainer>
   );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Buscar os produtos mais vendidos/ mais acessados
-
   return {
-    paths: [{ params: { id: 'prod_MYbPX1KFgjI9pl' } }],
-    fallback: true,
+    paths: [{ params: { id: 'price_1LpUCVLS3LPcFbjNKA3WoVJY' } }],
+    fallback: 'blocking',
   };
 };
 
 export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
   params,
 }) => {
-  const productID = params.id;
+  const productId = params.id;
 
-  const product = await stripe.products.retrieve(productID, {
+  const product = await stripe.products.retrieve(productId, {
     expand: ['default_price'],
   });
 
@@ -66,8 +71,9 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
           currency: 'BRL',
         }).format(price.unit_amount / 100),
         description: product.description,
+        defaultPriceId: price.id,
       },
     },
-    revalidate: 60 * 60 * 1, // 1 hour
+    revalidate: 60 * 60 * 1, // 1 hours
   };
 };
