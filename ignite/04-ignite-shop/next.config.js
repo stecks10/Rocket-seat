@@ -7,7 +7,14 @@ const nextConfig = {
     domains: [
       'files.stripe.com'
     ]
-  }
+  },
+
+  experimental: {
+    newNextLinkBehavior: true,
+    images: {
+      allowFutureImages: true,
+    },
+  },
 }
 
 
