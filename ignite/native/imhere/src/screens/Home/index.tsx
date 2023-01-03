@@ -6,7 +6,7 @@ import { styles } from './styles';
 
 export function Home() {
   const [participants, setParticipants] = useState<string[]>([]);
-  const [participantName, setParticipanteName] = useState('');
+  const [participantName, setParticipantName] = useState('');
 
   function handleParticipantAdd() {
     if (participants.includes(participantName)) {
@@ -14,7 +14,7 @@ export function Home() {
     }
 
     setParticipants(prevState => [...prevState, participantName])
-    setParticipanteName('')
+    setParticipantName('')
   }
 
   function handleParticipantRemove(name: string) {
@@ -45,7 +45,7 @@ export function Home() {
           style={styles.input}
           placeholder="Nome do participante"
           placeholderTextColor="#6b6b6b"
-          onChangeText={setParticipanteName}
+          onChangeText={setParticipantName}
           value={participantName}
         />
 
